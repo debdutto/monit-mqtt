@@ -1,0 +1,26 @@
+{
+  "name": "monit-mqtt",
+  "version": "0.0.1",
+  "description": "Monitor mqtt server stats",
+  "main": "index.js",
+  "dependencies": {
+    "mqtt": "^2.3.0",
+    "colors": "^1.1.2",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/debduttoc/monit-mqtt.git"
+  },
+  "author": "Debdutto Chakraborty <debdutto.chakraborty@gmail.com> (https://github.com/Debdutto)",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/debduttoc/monit-mqtt#readme",
+  "preferGlobal": true,
+  "bin": {
+    "monit-mqtt": "index.js"
+  }
+}
