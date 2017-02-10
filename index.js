@@ -9,7 +9,7 @@ var argv = require('minimist')(process.argv.slice(2), {
         host: ['h'],
         port: ['p'],
         clean: ['cln', 'c'],
-        clientid: ['clid', 'id', 'i'],
+        clientid: ['clid', 'id'],
         topics: ['t', 'topic'],
         qos: ['q'],
         interval: ['int', 'i']
@@ -58,7 +58,7 @@ function parseArguments() {
         }
 
         if (isNaN(argv.qos) || !(argv.qos || (argv.qos >= 0 && argv.qos <= 2))) {
-            options.qos = 1
+            options.qos = argv.qos = 1
         } else {
             options.qos = argv.qos
         }
