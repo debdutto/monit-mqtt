@@ -1,6 +1,6 @@
 {
   "name": "monit-mqtt",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Monitor mqtt server stats",
   "main": "index.js",
   "dependencies": {
