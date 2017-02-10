@@ -16,6 +16,7 @@ Note: All values being passed here indicate defaults.
 
 ##### Options
 > `--options | --opts | --opt | -o`
+
 ###### Usage:
 ```
 monit-mqtt --options options.json
