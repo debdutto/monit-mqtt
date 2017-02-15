@@ -1,6 +1,6 @@
 {
   "name": "monit-mqtt",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Monitor mqtt server stats",
   "main": "index.js",
   "dependencies": {
@@ -18,7 +18,7 @@
   },
   "author": "Debdutto Chakraborty <debdutto.chakraborty@gmail.com> (https://github.com/Debdutto)",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/debduttoc/monit-mqtt#readme",
+  "homepage": "https://github.com/Debdutto/monit-mqtt",
   "preferGlobal": true,
   "bin": {
     "monit-mqtt": "index.js"
