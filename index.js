@@ -44,7 +44,7 @@ function parseArguments() {
         }
 
         if (argv.clean) {
-            options.clean = argv.clean
+            options.clean = checkTruthy(argv.clean)
         }
 
         if (argv.clientid) {
@@ -52,7 +52,7 @@ function parseArguments() {
         }
 
         try {
-            argv.qos = parseInt(argv.qos)
+            argv.qos = parseInt(argv.qos, 10)
         } catch (e) {
             console.log('Invalid QOS Value')
         }
@@ -78,7 +78,7 @@ function parseArguments() {
 
         if (argv.interval) {
             try {
-                options.interval = parseInt(argv.interval)
+                options.interval = parseInt(argv.interval, 10)
             } catch (e) {
                 console.log('Invalid Interval Passed')
             }
@@ -93,10 +93,18 @@ function parseArguments() {
     console.log(options)
 
     startMonitoring(options, events)
+}
 
-    function createTopicsObject(options, argv) {
-        for (let iteration = 0; iteration < argv.topics.length; iteration++) {
-            options.topics[argv.topics[iteration]] = argv.qos
-        }
+function createTopicsObject(options, argv) {
+    for (let iteration = 0; iteration < argv.topics.length; iteration++) {
+        options.topics[argv.topics[iteration]] = argv.qos
+    }
+}
+
+function checkTruthy(value) {
+    if (value && (value === true || value === 'true')) {
+        return true
+    } else {
+        return false
     }
 }
