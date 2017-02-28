@@ -4,9 +4,9 @@
   "description": "Monitor mqtt server stats",
   "main": "index.js",
   "dependencies": {
-    "mqtt": "^2.3.0",
     "colors": "^1.1.2",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "mqtt": "^2.4.0"
   },
   "devDependencies": {},
   "scripts": {
